@@ -24,20 +24,20 @@
       <h1>Temporizador</h1>
       <h2 class="text-white-50">Ejercicio 6</h2>
     </nav>
-    <main>
-      <section class="rounded-4 container-fluid">
+    <main> 
+      <section class="rounded-4 container-fluid" id="formContainer">
         <form class="row text-center p-3">
           <div class="col-12 col-md-4">
             <label for="horas" class="form-label">Horas</label>
-            <input type="number" class="form-control" id="horas" min="0"/>
+            <input type="number" class="form-control" id="inputHoras" min="0" max="23" value="0" required/>
           </div>
           <div class="col-12 col-md-4">
             <label for="minutos" class="form-label">Minutos</label>
-            <input type="number" class="form-control" id="minutos" min="0" max="59"/>
+            <input type="number" class="form-control" id="inputMinutos" min="0" max="59" value="0" required/>
           </div>
           <div class="col-12 col-md-4">
             <label for="segundos" class="form-label">Segundos</label>
-            <input type="number" class="form-control" id="segundos" min="0" max="59"/>
+            <input type="number" class="form-control" id="inputSegundos" min="0" max="59" value="0" required/>
           </div>
           <div class="col-12 mt-4">
             <button type="submit" class="btn btn-outline-light border-2 fw-bold px-4 py-2">Iniciar</button>
@@ -45,8 +45,8 @@
           
         </form>
       </section>
-      <section class="rounded-4 d-none">
-        <p class="text-center" id="tiempo">00:00:00</p>
+      <section class="rounded-4 d-none" id="tiempoContainer">
+        <p class="text-center" id="tiempo"></p>
         <div class="text-center">
           <button class="btn border-0" id="btnPause"><i class="bi bi-pause-fill"></i></button>
           <button class="btn border-0" id="btnPlay"><i class="bi bi-play-fill"></i></button>
